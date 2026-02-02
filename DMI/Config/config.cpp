@@ -23,6 +23,33 @@ void load_config(std::string serie)
     serieSelected = false;
     etcsDialMaxSpeed = 400;
     stm_layout_file = "stm_windows.json";
+    
+    // 檢查是否為台鐵ATP模式
+    if (serie == "TRA_ATP") {
+        etcsDialMaxSpeed = 130;
+        stm_layout_file = "tra_atp_layout.json";
+        playSoundOnRadioStatusChange = true;
+        displayTTPavailable = true;
+        softkeys = true;
+        serieSelected = true;
+        
+        // 設置台鐵ATP特定參數
+        extern bool tra_atp_mode;
+        extern int tra_max_speed;
+        extern bool tra_sound_enabled;
+        extern std::string tra_language;
+        
+        tra_atp_mode = true;
+        tra_max_speed = 130;
+        tra_sound_enabled = true;
+        tra_language = "zh_TW";
+        
+        platform->debug_print("TRA ATP mode activated");
+        startWindows();
+        maxSpeed = etcsDialMaxSpeed;
+        return;
+    }
+    
     auto contents = platform->read_file("config.json");
     if (contents) {
         json j = json::parse(*contents);

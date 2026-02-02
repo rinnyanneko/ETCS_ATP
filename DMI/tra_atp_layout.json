@@ -1,0 +1,163 @@
+{
+    "TRA_ATP": {
+        "layout_name": "Taiwan Railway ATP",
+        "version": "1.0",
+        "description": "台灣鐵路管理局ATP系統顯示介面",
+        "screen_resolution": {
+            "width": 800,
+            "height": 600
+        },
+        "components": {
+            "speedometer": {
+                "x": 50,
+                "y": 50, 
+                "width": 200,
+                "height": 200,
+                "max_speed": 130,
+                "warning_speed": 120,
+                "show_target": true,
+                "show_warning": true
+            },
+            "signal_indicator": {
+                "x": 280,
+                "y": 50,
+                "width": 100,
+                "height": 100,
+                "show_aspect_text": true,
+                "flash_interval": 500
+            },
+            "status_panel": {
+                "x": 410,
+                "y": 50,
+                "width": 340,
+                "height": 150,
+                "show_labels": true,
+                "light_size": 20,
+                "light_spacing": 25
+            },
+            "distance_bar": {
+                "x": 50,
+                "y": 270,
+                "width": 700,
+                "height": 30,
+                "max_distance": 1000,
+                "warning_distance": 300,
+                "critical_distance": 100
+            },
+            "message_area": {
+                "x": 50,
+                "y": 320,
+                "width": 700,
+                "height": 200,
+                "max_messages": 8,
+                "font_size": 14,
+                "auto_scroll": true
+            },
+            "control_buttons": {
+                "x": 50,
+                "y": 540,
+                "width": 700,
+                "height": 50,
+                "button_spacing": 5,
+                "show_labels": true
+            }
+        },
+        "colors": {
+            "background": "#1E2832",
+            "panel": "#283238", 
+            "border": "#647888",
+            "text": "#DCDCDC", 
+            "signal_red": "#FF0000",
+            "signal_yellow": "#FFFF00",
+            "signal_green": "#00FF00",
+            "warning": "#FFA500",
+            "active": "#00C864",
+            "inactive": "#787878"
+        },
+        "fonts": {
+            "default": {
+                "family": "NotoSans",
+                "size": 12,
+                "bold": false
+            },
+            "speed_display": {
+                "family": "NotoSans",
+                "size": 24,
+                "bold": true
+            },
+            "status_labels": {
+                "family": "NotoSans", 
+                "size": 10,
+                "bold": false
+            },
+            "messages": {
+                "family": "NotoSans",
+                "size": 14,
+                "bold": false
+            }
+        },
+        "sounds": {
+            "atp_warning": "tra_atp_warning.wav",
+            "overspeed_alarm": "tra_overspeed.wav",
+            "brake_apply": "tra_brake.wav",
+            "button_click": "tra_click.wav",
+            "signal_change": "tra_signal.wav"
+        },
+        "texts": {
+            "zh_TW": {
+                "atp_active": "ATP作用中",
+                "atp_inactive": "ATP未作用",
+                "signal_clear": "號誌正常",
+                "signal_caution": "號誌注意",
+                "signal_stop": "號誌停車",
+                "speed_limit": "速度限制",
+                "brake_applied": "煞車作用",
+                "door_status": "車門狀態",
+                "traction_cut": "牽引切斷",
+                "emergency_brake": "緊急煞車",
+                "overspeed": "超速警告",
+                "distance_to_target": "目標距離",
+                "ack_button": "確認",
+                "reset_button": "重置", 
+                "override_button": "超馳",
+                "emergency_button": "緊急",
+                "system_startup": "台鐵ATP系統啟動",
+                "system_shutdown": "台鐵ATP系統關閉",
+                "atp_mode_on": "ATP模式啟動",
+                "atp_mode_off": "ATP模式關閉"
+            },
+            "en": {
+                "atp_active": "ATP Active",
+                "atp_inactive": "ATP Inactive", 
+                "signal_clear": "Signal Clear",
+                "signal_caution": "Signal Caution",
+                "signal_stop": "Signal Stop",
+                "speed_limit": "Speed Limit",
+                "brake_applied": "Brake Applied",
+                "door_status": "Door Status",
+                "traction_cut": "Traction Cut",
+                "emergency_brake": "Emergency Brake",
+                "overspeed": "Overspeed Warning",
+                "distance_to_target": "Distance to Target",
+                "ack_button": "ACK",
+                "reset_button": "Reset",
+                "override_button": "Override", 
+                "emergency_button": "Emergency",
+                "system_startup": "TRA ATP System Startup",
+                "system_shutdown": "TRA ATP System Shutdown",
+                "atp_mode_on": "ATP Mode On",
+                "atp_mode_off": "ATP Mode Off"
+            }
+        },
+        "behavior": {
+            "auto_acknowledge_timeout": 30000,
+            "overspeed_warning_threshold": 5,
+            "emergency_brake_threshold": 10,
+            "signal_flash_rate": 2,
+            "message_display_time": 5000,
+            "button_press_feedback": true,
+            "sound_enabled": true,
+            "vibration_enabled": false
+        }
+    }
+}

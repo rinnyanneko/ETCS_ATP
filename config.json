@@ -1,0 +1,37 @@
+{
+    "TRA_ATP": {
+        "SpeedDial": 130,
+        "STMLayout": "tra_atp_layout.json",
+        "SoftKeys": true,
+        "PlaySoundOnRadioStatusChange": true,
+        "DisplayTimeToPermitted": true,
+        "Theme": "TRA_Standard",
+        "Language": "zh_TW",
+        "SignalSystem": "TRA_ATP",
+        "MaxSpeed": 130,
+        "SpeedUnits": "km/h",
+        "DistanceUnits": "m",
+        "ShowATPStatus": true,
+        "ShowSignalAspect": true,
+        "PlayTRAWarningSound": true,
+        "AutoAcknowledgeTimeout": 30000,
+        "OverspeedWarningThreshold": 5,
+        "EmergencyBrakeThreshold": 10,
+        "MessageDisplayTime": 5000,
+        "SoundEnabled": true
+    },
+    "ETCS_Default": {
+        "SpeedDial": 400,
+        "STMLayout": "stm_windows.json",
+        "SoftKeys": false,
+        "PlaySoundOnRadioStatusChange": false,
+        "DisplayTimeToPermitted": false
+    },
+    "SimRail": {
+        "SpeedDial": 160,
+        "STMLayout": "stm_windows.json",
+        "SoftKeys": true,
+        "PlaySoundOnRadioStatusChange": true,
+        "DisplayTimeToPermitted": true
+    }
+}

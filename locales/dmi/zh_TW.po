@@ -1,0 +1,303 @@
+# Traditional Chinese (Taiwan) translation for TRA ATP DMI
+# Copyright (C) 2024 Taiwan Railway Administration
+# This file is distributed under the same license as the ETCS package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ETCS DMI TRA ATP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 12:00+0800\n"
+"PO-Revision-Date: 2024-01-01 12:00+0800\n"
+"Last-Translator: TRA ATP Team\n"
+"Language-Team: Traditional Chinese (Taiwan)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# ATP System Messages
+msgid "ATP Active"
+msgstr "ATP作用中"
+
+msgid "ATP Inactive"
+msgstr "ATP未作用"
+
+msgid "ATP System Startup"
+msgstr "台鐵ATP系統啟動"
+
+msgid "ATP System Shutdown"
+msgstr "台鐵ATP系統關閉"
+
+msgid "ATP Mode On"
+msgstr "ATP模式啟動"
+
+msgid "ATP Mode Off"
+msgstr "ATP模式關閉"
+
+# Signal Aspects
+msgid "Signal Clear"
+msgstr "號誌正常"
+
+msgid "Signal Caution"
+msgstr "號誌注意"
+
+msgid "Signal Stop"
+msgstr "號誌停車"
+
+msgid "Signal Flashing Yellow"
+msgstr "號誌閃黃"
+
+msgid "No Signal"
+msgstr "無號誌"
+
+# Speed and Distance
+msgid "Speed Limit"
+msgstr "速度限制"
+
+msgid "Current Speed"
+msgstr "目前速度"
+
+msgid "Target Speed"
+msgstr "目標速度"
+
+msgid "Distance to Target"
+msgstr "目標距離"
+
+msgid "Overspeed Warning"
+msgstr "超速警告"
+
+msgid "Speed Restriction"
+msgstr "速度限制"
+
+# System Status
+msgid "Brake Applied"
+msgstr "煞車作用"
+
+msgid "Brake Released"
+msgstr "煞車解除"
+
+msgid "Door Status"
+msgstr "車門狀態"
+
+msgid "Door Closed"
+msgstr "車門關閉"
+
+msgid "Door Open"
+msgstr "車門開啟"
+
+msgid "Traction Cut"
+msgstr "牽引切斷"
+
+msgid "Traction Active"
+msgstr "牽引作用"
+
+msgid "Emergency Brake"
+msgstr "緊急煞車"
+
+msgid "Emergency Brake Applied"
+msgstr "緊急煞車作用"
+
+# Control Buttons
+msgid "ACK"
+msgstr "確認"
+
+msgid "Acknowledge"
+msgstr "確認"
+
+msgid "Reset"
+msgstr "重置"
+
+msgid "Override"
+msgstr "超馳"
+
+msgid "Emergency"
+msgstr "緊急"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Confirm"
+msgstr "確認"
+
+# Menu Items
+msgid "Main Menu"
+msgstr "主選單"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "System Info"
+msgstr "系統資訊"
+
+msgid "Diagnostics"
+msgstr "診斷"
+
+msgid "Language"
+msgstr "語言"
+
+msgid "Sound Settings"
+msgstr "聲音設定"
+
+msgid "Display Settings"
+msgstr "顯示設定"
+
+# Warning Messages
+msgid "System Fault"
+msgstr "系統故障"
+
+msgid "Communication Error"
+msgstr "通訊錯誤"
+
+msgid "Sensor Fault"
+msgstr "感測器故障"
+
+msgid "Brake Test Required"
+msgstr "需要煞車測試"
+
+msgid "System Test Required"
+msgstr "需要系統測試"
+
+msgid "Maintenance Required"
+msgstr "需要維護"
+
+# Status Messages
+msgid "System Ready"
+msgstr "系統就緒"
+
+msgid "System Initializing"
+msgstr "系統初始化中"
+
+msgid "System Shutdown"
+msgstr "系統關閉"
+
+msgid "Test Mode"
+msgstr "測試模式"
+
+msgid "Normal Operation"
+msgstr "正常運行"
+
+msgid "Restricted Operation"
+msgstr "限制運行"
+
+# Time and Date
+msgid "Time"
+msgstr "時間"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "System Time"
+msgstr "系統時間"
+
+# Units
+msgid "km/h"
+msgstr "公里/小時"
+
+msgid "m"
+msgstr "公尺"
+
+msgid "km"
+msgstr "公里"
+
+msgid "sec"
+msgstr "秒"
+
+msgid "min"
+msgstr "分"
+
+# Error Messages
+msgid "EVC not connected!"
+msgstr "EVC未連接！"
+
+msgid "Train serie not selected!"
+msgstr "列車系列未選擇！"
+
+msgid "Configuration Error"
+msgstr "配置錯誤"
+
+msgid "Hardware Error"
+msgstr "硬體錯誤"
+
+msgid "Software Error"
+msgstr "軟體錯誤"
+
+# Driver Actions
+msgid "Driver Acknowledgment Required"
+msgstr "需要駕駛員確認"
+
+msgid "Driver Action Required"
+msgstr "需要駕駛員操作"
+
+msgid "Press ACK to continue"
+msgstr "按確認繼續"
+
+msgid "System waiting for driver"
+msgstr "系統等待駕駛員"
+
+# Train Data
+msgid "Train Length"
+msgstr "列車長度"
+
+msgid "Train Weight"
+msgstr "列車重量"
+
+msgid "Max Speed"
+msgstr "最高速度"
+
+msgid "Brake Performance"
+msgstr "煞車性能"
+
+# Track Information
+msgid "Track Ahead Free"
+msgstr "前方軌道淨空"
+
+msgid "Track Occupied"
+msgstr "軌道佔用"
+
+msgid "Level Crossing"
+msgstr "平交道"
+
+msgid "Station"
+msgstr "車站"
+
+msgid "Signal"
+msgstr "號誌"
+
+# System Modes
+msgid "Full Supervision"
+msgstr "完全監督"
+
+msgid "Partial Supervision"
+msgstr "部分監督"
+
+msgid "On Sight"
+msgstr "目視運行"
+
+msgid "Shunting"
+msgstr "調車"
+
+msgid "Standby"
+msgstr "待機"
+
+# Additional TRA-specific terms
+msgid "TRA ATP System"
+msgstr "台鐵ATP系統"
+
+msgid "Taiwan Railway"
+msgstr "台灣鐵路"
+
+msgid "Platform"
+msgstr "月台"
+
+msgid "Departure"
+msgstr "發車"
+
+msgid "Arrival"
+msgstr "到站"
+
+msgid "Next Station"
+msgstr "下一站"
+
+msgid "Final Destination"
+msgstr "終點站"

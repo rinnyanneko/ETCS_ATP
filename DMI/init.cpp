@@ -8,6 +8,8 @@
  */
 #include "monitor.h"
 #include "graphics/drawing.h"
+#include "graphics/tra_components.h"
+#include "tra_atp_integration.h"
 #include "tcp/server.h"
 #include "control/control.h"
 #include "platform_runtime.h"
@@ -15,7 +17,7 @@
 void startWindows();
 void initialize_stm_windows();
 
-float platform_size_w = 640.0f, platform_size_h = 480.0f;
+float platform_size_w = 800.0f, platform_size_h = 600.0f;
 
 void on_platform_ready()
 {
@@ -26,6 +28,26 @@ void on_platform_ready()
     setSpeeds(0, 0, 0, 0, 0, 0);
     setMonitor(CSM);
     setSupervision(NoS);
+    
+    // 初始化台鐵ATP組件
+    extern bool tra_atp_mode;
+    if (tra_atp_mode) {
+        initTRAComponents();
+        setTRAMode(true);
+        
+        // 初始化台鐵ATP整合系統
+        if (initializeTRAATPIntegration()) {
+            platform->debug_print("TRA ATP Integration initialized");
+            
+            // 啟動整合系統
+            if (tra_atp_integration) {
+                tra_atp_integration->start();
+            }
+        } else {
+            platform->debug_print("Failed to initialize TRA ATP Integration");
+        }
+    }
+    
     startSocket();
     startWindows();
     initialize_stm_windows();

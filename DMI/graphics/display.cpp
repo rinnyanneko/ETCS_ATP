@@ -9,6 +9,7 @@
 #include "display.h"
 #include "button.h"
 #include "text_button.h"
+#include "tra_components.h"
 #include "../window/menu.h"
 #include "../monitor.h"
 #include "../control/control.h"
@@ -59,6 +60,16 @@ void displayETCS()
     }
 
 #endif
+
+    // 檢查是否為台鐵ATP模式
+    extern bool tra_atp_mode;
+    if (tra_atp_mode) {
+        updateTRADisplay();
+        
+        // 更新台鐵ATP整合系統
+        extern void updateTRAATPIntegration();
+        updateTRAATPIntegration();
+    }
 
     std::vector<std::vector<int>> alreadyDrawn;
     for(auto it=active_windows.rbegin(); it!=active_windows.rend(); ++it)

@@ -46,6 +46,19 @@ const Color LightRed = {255, 96, 96};
 const Color LightGreen = {96, 255, 96};
 const Color Magenta = {255, 0, 255};
 
+// 台鐵ATP特定顏色定義
+const Color TRA_Green = {0, 255, 0};        // 台鐵綠色信號
+const Color TRA_Yellow = {255, 255, 0};     // 台鐵黃色信號  
+const Color TRA_Red = {255, 0, 0};          // 台鐵紅色信號
+const Color TRA_Blue = {0, 100, 200};       // 台鐵藍色背景
+const Color TRA_Orange = {255, 165, 0};     // 台鐵橙色警告
+const Color TRA_Background = {20, 30, 40};  // 台鐵深色背景
+const Color TRA_Text = {220, 220, 220};     // 台鐵文字顏色
+const Color TRA_Panel = {40, 50, 60};       // 台鐵面板背景
+const Color TRA_Border = {100, 120, 140};   // 台鐵邊框顏色
+const Color TRA_Active = {0, 200, 100};     // 台鐵啟動狀態
+const Color TRA_Inactive = {120, 120, 120}; // 台鐵非啟動狀態
+
 inline Color Color::from_etcs(int rawdata) {
     if (rawdata == 0)
         return White;

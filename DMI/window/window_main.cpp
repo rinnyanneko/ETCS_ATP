@@ -10,12 +10,56 @@
 #include "../graphics/button.h"
 #include "../graphics/icon_button.h"
 #include "../graphics/text_button.h"
+#include "../graphics/tra_components.h"
 #include "../STM/stm_objects.h"
+
 void planningConstruct(window *w);
 void construct_nav(window *w, bool custom);
 void build_taf(window *w);
+
+// 台鐵ATP主窗口構建函數
+void construct_tra_main(window *w, bool custom)
+{
+    // 初始化台鐵ATP組件
+    initTRAComponents();
+    
+    // 設置台鐵ATP佈局
+    int offset = softkeys ? 0 : 15;
+    
+    // 速度表 - 左上角
+    w->addToLayout(&traSpeedometer, new RelativeAlignment(nullptr, 50, offset + 50));
+    
+    // 信號指示器 - 速度表右側
+    w->addToLayout(&traSignalIndicator, new RelativeAlignment(nullptr, 280, offset + 50));
+    
+    // 狀態面板 - 右上角
+    w->addToLayout(&traStatusPanel, new RelativeAlignment(nullptr, 410, offset + 50));
+    
+    // 距離條 - 中間橫條
+    w->addToLayout(&traDistanceBar, new RelativeAlignment(nullptr, 50, offset + 270));
+    
+    // 訊息區域 - 中下部
+    w->addToLayout(&traMessageArea, new RelativeAlignment(nullptr, 50, offset + 320));
+    
+    // 控制按鈕 - 底部
+    w->addToLayout(&traControlButtons, new RelativeAlignment(nullptr, 50, offset + 540));
+    
+    // 如果需要軟鍵，添加導航按鈕
+    if (softkeys) {
+        construct_nav(w, custom);
+    }
+}
+
 void construct_main(window *w, bool custom)
 {
+    // 檢查是否為台鐵ATP模式
+    extern bool tra_atp_mode;
+    if (tra_atp_mode) {
+        construct_tra_main(w, custom);
+        return;
+    }
+    
+    // 原始ETCS構建邏輯
     extern Component csg;
     extern Component a1;
     extern Component a2;
